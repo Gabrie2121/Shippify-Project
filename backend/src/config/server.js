@@ -8,8 +8,8 @@ const server = express()
 server.use(express.json())
 
 server.use('/company', routeCompany)
-//server.use('/driver', routeDriver)
-//server.use('/vehicle', routeVehicle)
+server.use('/driver', routeDriver)
+server.use('/vehicle', routeVehicle)
 
 
 server.listen(port,()=>{

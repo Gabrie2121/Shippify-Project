@@ -1,10 +1,6 @@
 const mysql = require('mysql')
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: '',
-    password: '',
-    database: 'vehiclechallenge'
-})
+const config = require("./config.json")
+var connection = mysql.createConnection(config)
 
 connection.connect((err)=>{
     if(err){
